@@ -1,0 +1,7 @@
+# Keep environment variables out of version control
+.idea/
+servicios/conexion.php
+docker-compose.yml
+Dockerfile
+composer-setup.php
+.DS_Store
