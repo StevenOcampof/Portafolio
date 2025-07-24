@@ -1,0 +1,120 @@
+:root {
+    /* Paleta Light (modo claro) */
+    --color-fondo: #ffffff;        /* Fondo principal */
+    --color-texto: #000000;        /* Texto principal */
+    --color-gris: #a8a6a6a5;       /* Gris */
+    --color-amarillo: #f2c744;     /* Amarillo */
+    --color-rojo: #e74c3c;         /* Rojo */
+    --color-azul: #000fff;         /* Azul */
+    --color-verde: rgb(46, 204, 113);        /* Verde */
+    --color-sombra: #00000033;     /* Sombra */
+    --color-amarilloCl: rgba(246, 226, 158, 0.19);
+    --color-rojoCl: rgba(255, 125, 109, 0.19);
+    --color-azulCl: rgba(132, 137, 255, 0.19);
+}
+
+.letraNav {
+    font-size: 18px !important;
+    color: var(--color-texto);
+}
+
+.letraNav:hover {
+    color: var(--color-texto);
+    border-bottom: 3px solid var(--color-amarillo);
+    text-shadow: var(--color-texto) 1px 0 10px;
+    padding-bottom: 5px;
+}
+
+.letraNavTitulo:hover {
+    color: var(--color-texto);
+    text-shadow: var(--color-texto) 1px 0 10px;
+}
+
+/* Modo claro */
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Bitcount Grid Single', sans-serif;
+    font-size: 22px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a {
+    color: var(--color-texto);
+}
+
+nav{
+    background-color: var(--color-fondo);
+    box-shadow: 0 5px 10px var(--color-sombra);
+}
+
+.img-shadow {
+    filter: drop-shadow(0 0 10px var(--color-texto));
+}
+
+#theme-icon{
+    filter: drop-shadow(0 0 10px var(--color-texto));
+    font-size: 30px;
+}
+
+#toggle-mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-texto);
+}
+
+#contacto{
+    color: var(--color-texto);
+    background: var(--color-amarillo);
+    text-align: center;
+    text-decoration: none;
+}
+.dark-mode #contacto {
+    color: var(--color-amarillo);
+    background: var(--color-fondo);
+}
+
+/* animaciones */
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.dark-mode .texto-gradient {
+    font-weight: bold;
+    background: radial-gradient(circle, var(--color-verde) ,var(--color-texto), var(--color-verde));
+    background-size: 200% 200%;
+    animation: moveGradient 4s ease;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* fin animaciones */
+
+/* Modo oscuro */
+.dark-mode {
+    --color-fondo: #121212;   /* Fondo en dark */
+    --color-texto: #ffffff;   /* Texto en dark */
+    --color-gris: #333333;
+    --color-sombra: #ffffff;
+}
+
+.dark-mode .navbar,
+.dark-mode .dropdown-menu {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.dark-mode .card {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border-color: var(--color-gris);
+}
+
+
+
