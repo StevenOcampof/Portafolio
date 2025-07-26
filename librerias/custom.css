@@ -49,9 +49,37 @@ nav{
     background-color: var(--color-fondo);
     box-shadow: 0 5px 10px var(--color-sombra);
 }
+.custom-toggler {
+    border: var(--color-texto) 2px solid;
+    border-radius: 5px;
+    box-shadow: var(--color-sombra) 0 0 10px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.custom-toggler .line {
+    width: 25px;
+    height: 2.5px;
+    background-color: var(--color-texto);
+    border-radius: 2px;
+}
 
 .img-shadow {
     filter: drop-shadow(0 0 10px var(--color-texto));
+}
+
+.card {
+    width: 400px !important;
+    height: 500px !important;
+    overflow: auto;
+}
+
+.img-card{
+    border: none;
+    border-radius: 10px;
 }
 
 #theme-icon{
@@ -114,7 +142,7 @@ nav{
     background-color: var(--color-fondo);
     color: var(--color-texto);
     border-color: var(--color-gris);
+    scrollbar-color: var(--color-texto) var(--color-fondo);
 }
-
 
 
