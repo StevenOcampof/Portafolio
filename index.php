@@ -23,7 +23,7 @@
         <!-- Logo y nombre -->
         <a class="navbar-brand d-flex align-items-center titles letraNavTitulo" href="./index.php">
             <img src="imagenes/portatil-pt.png" alt="Logo" width="70" height="70" class="d-inline-block me-2">
-            MI PORTAFOLIO
+            StevenOcampoDev
         </a>
 
         <!-- Botón hamburguesa -->
@@ -48,7 +48,6 @@
                 <li class="nav-item">
                     <a class="nav-link letraNav" href="#section-contact">Saber más</a>
                 </li>
-
             </ul>
             <div class="mx-2">
                 <button id="toggle-mode">
@@ -62,24 +61,35 @@
 <div class="container-fluid">
     <section class="my-2 mx-5">
         <div class="row justify-content-center align-items-center">
-            <div class="col-sm-6">
+            <!-- Texto: aparece primero en móviles -->
+            <div class="col-12 col-md-8 order-1 order-md-1">
                 <h2 class="texto-gradient">Información personal</h2>
-                <p class="texto-gradient">
-                    Soy <strong>Jeison Ocampo</strong> Tecnólogo en Análisis y Desarrollo de Software con experiencia en
-                    desarrollo web (PHP, MySQL, HTML, CSS, JavaScript) y en la creación de un proyecto de realidad
-                    virtual adaptado a la web utilizando Unity. Mi objetivo es seguir creciendo como desarrollador y
-                    crear soluciones innovadoras.
+                <p>
+                    Soy <strong>Jeison Ocampo</strong>, Tecnólogo en Análisis y Desarrollo de Software con experiencia
+                    en desarrollo web utilizando tecnologías como PHP, MySQL, HTML, CSS y JavaScript. He participado en
+                    la creación de proyectos de realidad virtual y su adaptación a entornos web mediante Unity. Me gusta
+                    trabajar en equipo, soy proactivo, me adapto con facilidad a los cambios y me motiva aprender
+                    constantemente. Mi objetivo es seguir creciendo como desarrollador y crear soluciones innovadoras.
                 </p>
+                <div>
+                    <a class="btn Cv" download href="archivos/CV_Jeison_Steven_Ocampo_Figueroa.pdf" target="_blank">
+                        <i class="fa fa-file-pdf fs-3"></i> Descargar CV
+                    </a>
+                </div>
             </div>
 
-            <div class="col-sm-6 d-flex justify-content-center align-items-center">
+            <!-- Imagen: pasa abajo en móviles -->
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center order-2 order-md-2 mt-3 mt-md-0">
                 <img src="imagenes/portatil-pt.png" class="img-fluid rounded img-shadow" alt="portatil">
             </div>
         </div>
     </section>
 
     <section class="my-2 mx-5" id="section-proyects">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center my-5">
+            <div class="text-center mb-4">
+                <h1 class="texto-gradient">Algunos proyectos</h1>
+            </div>
             <div class="card col-sm-3 mx-5 my-2" style="width: 25rem;">
                 <h4 class="card-title mt-3">Proyecto VR/Web</h4>
                 <div id="carouselBagaWeb" class="carousel slide" data-bs-ride="carousel">
@@ -93,16 +103,19 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="imagenes/Baga1.png" class="card-img-top p-2 img-card" ondragstart="return false;"
-                                 alt="index proyecto Bagatela Web">
+                            <img src="../imagenes/Baga1.png" class="d-block w-100 p-2 img-card"
+                                 ondragstart="return false;"
+                                 alt="proyecto Bagatela Web img 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/Baga2.png" class="d-block w-100 p-2 img-card" ondragstart="return false;"
-                                 alt="...">
+                            <img src="../imagenes/Baga2.png" class="card-img-top p-2 img-card"
+                                 ondragstart="return false;"
+                                 alt="proyecto Bagatela Web img 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/Baga3.png" class="d-block w-100 p-2 img-card" ondragstart="return false;"
-                                 alt="...">
+                            <img src="../imagenes/Baga3.png" class="card-img-top p-2 img-card"
+                                 ondragstart="return false;"
+                                 alt="proyecto Bagatela Web img 3">
                         </div>
                     </div>
                     <button class="carousel-control-prev bg-black" type="button" data-bs-target="#carouselBagaWeb"
@@ -118,8 +131,9 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">Participé en el desarrollo de un recorrido virtual del museo La Bagatela,
-                        creado en equipo con Unity. El proyecto permite explorar el museo de forma interactiva e
+                        con el motor grafíco de Unity. El proyecto permite explorar el museo de forma interactiva e
                         inmersiva. Se programó en C# e incluimos elementos 3D y adaptación para la web.</p>
+                    <a href="https://www.tecnoparquenodocucuta.com/web/bagatela_virtual/">vér proyecto</a>
                 </div>
             </div>
             <div class="card col-sm-3 mx-5 my-2" style="width: 25rem;">
@@ -135,15 +149,16 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="imagenes/produ1.png" class="card-img-top p-2 img-card" ondragstart="return false;"
+                            <img src="../imagenes/produ1.png" class="card-img-top p-2 img-card"
+                                 ondragstart="return false;"
                                  alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/produ2.png" class="d-block w-100 p-2 img-card"
+                            <img src="../imagenes/produ2.png" class="card-img-top p-2 img-card"
                                  ondragstart="return false;" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/produ3.png" class="d-block w-100 p-2 img-card"
+                            <img src="../imagenes/produ3.png" class="card-img-top p-2 img-card"
                                  ondragstart="return false;" alt="...">
                         </div>
                     </div>
@@ -176,11 +191,13 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="imagenes/Lab1.png" class="card-img-top p-2 img-card" ondragstart="return false;"
+                            <img src="../imagenes/Lab1.png" class="card-img-top p-2 img-card"
+                                 ondragstart="return false;"
                                  alt="index proyecto Bagatela Web">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagenes/Lab2.png" class="d-block w-100 p-2 img-card" ondragstart="return false;"
+                            <img src="../imagenes/Lab2.png" class="card-img-top p-2 img-card"
+                                 ondragstart="return false;"
                                  alt="...">
                         </div>
                     </div>
@@ -230,6 +247,9 @@
             </div>
         </div>
     </section>
+    <a class="btn whatsapp sticky-bottom" href="https://wa.me/573504891589" target="_blank">
+        <i class="fab fa-whatsapp fs-3"></i>
+    </a>
 </div>
 <footer class="text-center text-lg-start">
     <div class="text-center p-2">
@@ -239,7 +259,7 @@
             </small>
         </p>
     </div>
-    <script src="./librerias/js/bootstrap5.min.js"></script>
-    <?php include_once __DIR__ . '/app/librerias-js.php'; ?>
+</footer>
+<?php include_once __DIR__ . '/app/librerias-js.php'; ?>
 </body>
 </html>

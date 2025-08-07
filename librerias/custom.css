@@ -7,7 +7,8 @@
     --color-rojo: #e74c3c;         /* Rojo */
     --color-azul: #000fff;         /* Azul */
     --color-verde: rgb(46, 204, 113);        /* Verde */
-    --color-sombra: #00000033;     /* Sombra */
+    --color-dorado: #bc9d33;        /* dorado */
+    --color-sombra: #000000;     /* Sombra */
     --color-amarilloCl: rgba(246, 226, 158, 0.19);
     --color-rojoCl: rgba(255, 125, 109, 0.19);
     --color-azulCl: rgba(132, 137, 255, 0.19);
@@ -38,7 +39,15 @@ body {
     font-size: 22px;
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    scroll-behavior: smooth;
     transition: background-color 0.3s, color 0.3s;
+}
+
+footer {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 10px;
 }
 
 .navbar a {
@@ -72,9 +81,17 @@ nav{
 }
 
 .card {
-    width: 400px !important;
-    height: 500px !important;
+    width: 350px !important;
+    height: 450px !important;
+    scrollbar-width: none;
     overflow: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 10px var(--color-sombra);
+    border-radius: 15px !important;
 }
 
 .img-card{
@@ -95,16 +112,51 @@ nav{
     color: var(--color-texto);
 }
 
-#contacto{
+.Cv{
     color: var(--color-texto);
-    background: var(--color-amarillo);
-    text-align: center;
-    text-decoration: none;
+    border: var(--color-dorado) 1px solid;
+    box-shadow: var(--color-dorado) 0 0 10px;
+    border-radius: 10px;
+    animation: resplandorVerdeBlanco 1.5s infinite ease-in-out;
 }
-.dark-mode #contacto {
-    color: var(--color-amarillo);
-    background: var(--color-fondo);
+
+.Cv:hover,
+.dark-mode .Cv:hover {
+    transform: scale(1.2); /* escalar en ambas direcciones */
+    transition: all 0.3s ease-in-out; /* efecto suave (opcional) */
+    animation: none; /* detener la animación */
 }
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-verde);
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px var(--color-verde);
+    animation: cambioColorSombra 2s linear infinite;
+}
+
+/* Hover: cambia color pero mantiene animación */
+.whatsapp:hover {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@keyframes cambioColorSombra {
+    0%   { box-shadow: 0 0 15px var(--color-verde); }
+    50%  { box-shadow: 0 0 15px white; }
+    100% { box-shadow: 0 0 15px var(--color-verde); }
+}
+/* fin estilos para el botón de whatsapp */
 
 /* animaciones */
 @keyframes moveGradient {
@@ -130,6 +182,7 @@ nav{
     --color-texto: #ffffff;   /* Texto en dark */
     --color-gris: #333333;
     --color-sombra: #ffffff;
+    --color-dorado: var(--color-verde);
 }
 
 .dark-mode .navbar,
@@ -145,4 +198,33 @@ nav{
     scrollbar-color: var(--color-texto) var(--color-fondo);
 }
 
+/* Estilos para el botón de CV */
+
+.dark-mode .Cv {
+    color: var(--color-texto);
+    border: var(--color-dorado) 1px solid;
+    border-radius: 10px;
+    animation: resplandorVerdeBlanco 1.5s infinite ease-in-out;
+}
+
+@keyframes resplandorVerdeBlanco {
+    0% {
+        transform: scale(1.1); /* escalar en ambas direcciones */
+        transition: all 0.3s ease-in-out; /* efecto suave (opcional) */
+        box-shadow: 0 0 10px var(--color-dorado);
+    }
+    50% {
+        transform: scale(1); /* escalar en ambas direcciones */
+        transition: all 0.3s ease-in-out; /* efecto suave (opcional) */
+        box-shadow: 0 0 10px white;
+    }
+    100% {
+        transform: scale(1.1); /* escalar en ambas direcciones */
+        transition: all 0.3s ease-in-out; /* efecto suave (opcional) */
+        box-shadow: 0 0 10px var(--color-dorado);
+    }
+}
+
+
+/* Fin estilos para el botón de CV */
 
